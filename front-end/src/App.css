@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-  background-color: #fecc98;
+  background-color: #f3f0ed;
   text-align: center;
   color: #040084;
 }
@@ -9,7 +9,7 @@ nav{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: #Cf4201;
+  background: #fdefd4;
 }
 
 .link{
@@ -28,4 +28,9 @@ nav{
   color: #fd7f00;
   background-color: #0141cf;
   border: 2px solid #040084;
+}
+.image-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
 }

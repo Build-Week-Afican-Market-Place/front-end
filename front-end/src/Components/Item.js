@@ -7,6 +7,12 @@ import {
 } from "react-router-dom";
 import ItemDescription from "./ItemDescription";
 import ItemShipping from "./ItemShipping";
+import {
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button
+} from 'reactstrap';
+
+
 
 function Item({shopItem}) {
   const params = useParams();
@@ -16,16 +22,16 @@ console.log(shopItem)
 
   return (
     <div className="item-wrapper">
-      <div className="item-header">
-        <div className="image-wrapper">
-          <img src={shopItem.imageUrl} alt={shopItem.commodityproduct} />
-        </div>
 
-        <div className="item-title-wrapper">
-          <h2>{shopItem.commodityproduct}</h2>
-          <h4>{shopItem.SubCategory}</h4>
-        </div>
-      </div>
+      <Card className="item-header">
+       
+          <CardImg top width="70%" src={shopItem.imageUrl} alt={shopItem.commodityproduct} />
+       
+          <CardBody>
+            <CardTitle>{shopItem.commodityproduct}</CardTitle>
+            <CardTitle>{shopItem.SubCategory}</CardTitle>
+          </CardBody>
+      </Card>
 
       <nav className="item-sub-nav">
         <NavLink exact to={routeMatch.url}>
